@@ -1,0 +1,142 @@
+* {
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+/* PAGE BACKGROUND */
+body {
+  margin: 0;
+  height: 100vh;
+  background: #2a2140;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #e1c4ff;
+}
+
+/* FLOATING CARD (FIXED — DOES NOT SCROLL) */
+.card {
+  width: 380px;
+  height: 720px; /* FIXED HEIGHT */
+  background: #231b3b;
+  border-radius: 36px;
+  padding: 36px 28px;
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.45);
+
+  display: flex;
+  flex-direction: column;
+
+  overflow: hidden; /* ✅ CARD NEVER SCROLLS */
+}
+
+/* =========================
+   TOP STATS
+========================= */
+.stats {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+.stats div {
+  width: 33%;
+  text-align: center;
+}
+
+.stats small {
+  display: block;
+  font-size: 12px;
+  opacity: 0.7;
+  margin-bottom: 4px;
+}
+
+.stats span {
+  font-size: 18px;
+}
+
+/* =========================
+   GLOWING CIRCLE
+========================= */
+.circle {
+  width: 260px;
+  height: 260px;
+  margin: 0 auto 28px;
+  border-radius: 50%;
+  background: #1d1633;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  box-shadow: 0 0 35px #e1c4ff, 0 0 70px rgba(225, 196, 255, 0.6);
+}
+
+/* TIME INSIDE CIRCLE */
+.circle span {
+  font-size: 36px;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+
+/* =========================
+   CONTROLS (FIXED POSITION)
+========================= */
+.controls {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.controls button {
+  flex: 1;
+  margin: 0 6px;
+  padding: 12px 0;
+
+  border-radius: 999px;
+  border: 1px solid #e1c4ff;
+  background: transparent;
+  color: #e1c4ff;
+
+  font-size: 15px;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.controls button:hover:not(:disabled) {
+  background: rgba(225, 196, 255, 0.08);
+}
+
+.controls button:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+}
+
+/* =========================
+   LAPS (ONLY SCROLLABLE PART)
+========================= */
+#laps {
+  flex: 1; /* TAKE REMAINING SPACE */
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  overflow-y: auto; /* ✅ ONLY THIS SCROLLS */
+  border-top: 1px solid rgba(225, 196, 255, 0.25);
+}
+
+/* LAP ITEM */
+#laps li {
+  padding: 14px 0;
+  border-bottom: 1px solid rgba(225, 196, 255, 0.25);
+  font-size: 14px;
+}
+
+/* OPTIONAL: HIDE SCROLLBAR (MOBILE FEEL) */
+/*
+#laps::-webkit-scrollbar {
+  width: 0;
+}
+#laps {
+  scrollbar-width: none;
+}
+*/

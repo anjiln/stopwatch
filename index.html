@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Stopwatch</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- FLOATING CARD -->
+  <div class="card">
+
+    <!-- TOP STATS -->
+    <div class="stats">
+      <div>
+        <small>Fastest</small>
+        <span id="fastest">--:--:--</span>
+      </div>
+      <div></div>
+      <div>
+        <small>Slowest</small>
+        <span id="slowest">--:--:--</span>
+      </div>
+    </div>
+
+    <!-- CIRCLE -->
+    <div class="circle">
+      <span id="time">00:00:00</span>
+    </div>
+
+    <!-- CONTROLS -->
+    <div class="controls">
+      <button id="start">Start</button>
+      <button id="lap" disabled>Lap</button>
+      <button id="reset" disabled>Reset</button>
+    </div>
+
+    <!-- LAPS -->
+    <ul id="laps"></ul>
+
+  </div>
+
+<script src="script.js"></script>
+</body>
+</html>
